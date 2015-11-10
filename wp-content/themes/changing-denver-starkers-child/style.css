@@ -1,0 +1,224 @@
+/*
+ Theme Name:   Changing Denver Child Theme
+ Theme URI:    http://changingdenver.com/wp-content/themes/changing-denver-child-theme/
+ Description:  Changing Denver Child Theme
+ Author:       Jeremy Zornow
+ Template:     starkers-master
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  changing-denver-child
+*/
+
+html {
+  margin-top:0 !important;
+  height:100%;
+  width:100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+ }
+
+.home-background-wrapper {
+  width:100%;
+  height:100%;
+  background-image:url('img/downtown_denver_banner.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size:cover;
+}
+
+.brand-wrapper {
+  width:100%;
+  text-align:center;
+  margin:auto;
+  height:100%;
+  background-image:url('img/splash-logo.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: left bottom;
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 980px) {
+  .brand-wrapper {
+    background-size: 150%;
+  }
+}
+
+.brand-wrapper .menu-navigation-menu-container {
+  position:absolute;
+  top:0;
+  right:0;
+  float:right;
+  width:100%;
+  margin:24px 24px auto auto;
+}
+
+
+.brand-wrapper .menu-navigation-menu-container #menu-navigation-menu {
+  float:right;
+}
+
+.brand-wrapper .menu-navigation-menu-container .menu-item,
+.header-menu #menu-navigation-menu .menu-item {
+  float:left;
+}
+
+.brand-wrapper .menu-navigation-menu-container .menu-item a,
+.header-menu #menu-navigation-menu .menu-item a {
+  font-size:18px;
+  padding: 18px;
+  margin-left:12px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius:10px;
+  border: 4px solid white;
+  float:left;
+  text-decoration: none;
+  color:white;
+  transition:0.2s;
+}
+
+.brand-wrapper .menu-navigation-menu-container .menu-item a:hover,
+.header-menu #menu-navigation-menu .menu-item a:hover {
+  background-color: white;
+  color:black;
+}
+
+.brand-wrapper .menu-navigation-menu-container .menu-item:first-child {
+  margin-left:0;
+}
+.site-title {
+  color:white;
+  size:2em;
+  text-decoration: none;
+}
+
+header {
+  height:200px;
+  background-image:url('img/downtown_denver_banner.jpg');
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+  background-size:cover;
+}
+
+.header-menu {
+  width:100%;
+  float:left;
+}
+
+.header-menu #menu-navigation-menu {
+  float:right;
+  margin:20px;
+}
+
+#logo {
+  background-image:url('img/splash-logo.png');
+  background-repeat: no-repeat;
+  background-size: auto 200px;
+  background-position: right bottom;
+  height:200px;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#logo, .header-menu #menu-navigation-menu, header {
+  transition:0.2s;
+}
+
+@media screen and (max-width:802px) {
+  #logo {
+    background-position: left bottom;
+  }
+}
+
+@media screen and (max-width:698px) {
+  header, #logo {
+    height:280px;
+  }
+} 
+
+@media screen and (max-width:548px){
+  #logo {
+    background-size: contain;
+  }
+}
+
+.content {
+  width:100%;
+  max-width:1024px;
+  margin:36px auto;
+}
+
+.page-title {
+  font-size:48px;
+  margin-bottom:24px;
+}
+
+footer {
+  width:100%;
+  background-color:black;
+  color:white;
+  padding-top: 12px;
+  padding-bottom:12px;
+}
+
+.footer-content {
+  max-width:1024px;
+  margin:auto;
+}
+
+@media screen and (max-width: 1072px){
+
+  .content, .footer-content {
+    padding-left: 24px;
+    padding-right:24px;
+    box-sizing:border-box;
+  }
+ 
+}
+
+.episodes-list {
+  margin-top:48px;
+}
+
+.episode {
+  margin-bottom:24px;
+  width:100%;
+  min-height:120px;
+}
+
+.episode .episode:last-child {
+  margin-bottom:0;
+}
+
+.episode .episode-thumbnail {
+  width:120px;
+  height:120px;
+  border:1px solid red;
+  float:left;
+  margin-right:24px;
+}
+
+.episode .episode-title {
+  font-size:32px;
+  margin-bottom:24px;
+}
+
+.episode .episode-title a {
+  text-decoration: none;
+  color:black;
+}
+
+p {
+  margin-bottom:1em;
+}
