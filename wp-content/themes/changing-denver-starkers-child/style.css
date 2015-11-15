@@ -33,6 +33,8 @@ body {
   background-attachment: fixed;
   background-position: bottom;
   background-size:cover;
+  position:fixed;
+  height:100%;
 }
 
 .brand-wrapper {
