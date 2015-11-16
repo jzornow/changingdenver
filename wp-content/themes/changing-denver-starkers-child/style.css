@@ -197,27 +197,55 @@ footer {
   margin-top:48px;
 }
 
+.episodes-list .episode {
+  /*border:1px solid black;*/
+  background-color:#efefef;
+}
+
 .episode {
-  margin-bottom:24px;
+  margin-bottom:36px;
   width:100%;
-  min-height:120px;
 }
 
 .episode .episode:last-child {
   margin-bottom:0;
 }
 
+.episode .episode-thumbnail a {
+  height:100%;
+  width:100%;
+  display:block;
+  position:relative;
+  z-index:1000;
+}
+
+
 .episode .episode-thumbnail {
   width:120px;
   height:120px;
-  border:1px solid red;
+  /*border:1px solid red;*/
   float:left;
   margin-right:24px;
+  overflow-x:hidden;
+}
+
+.episode-thumbnail .placeholder-image {
+  width:100%;
+  height:100%;
+  background-color:blue;
+}
+
+.episode .episode-thumbnail .wp-post-image {
+  max-height:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
 }
 
 .episode .episode-title {
-  font-size:32px;
-  margin-bottom:24px;
+  font-size:48px;
+  margin-bottom:12px;
+  padding-top:12px;
 }
 
 .episode .episode-title a {
@@ -229,7 +257,63 @@ p {
   margin-bottom:1em;
 }
 
-article {
+.episode-content {
   max-width:1024px;
+  width:100%;
   margin:auto;
+}
+
+.podcast-class {
+  width:100%;
+  display:block;
+  margin:20px auto;
+}
+
+.single-post .episode-content {
+  margin-top:36px;
+}
+
+@media screen and (max-width:648px) {
+  .episodes-list .episode .episode-content {
+    clear:both;
+  }
+
+  .episode .episode-title {
+    display:block;
+    width:100%;
+    font-size:32px;
+    clear:both;
+  }
+
+  .episode .episode-date,
+  .episode .episode-title {
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+  .episode .episode-thumbnail {
+    display:block;
+    width:100%;
+    overflow-y:hidden;
+  }
+
+  .episode .episode-thumbnail .wp-post-image {
+    width:100%;
+    height:auto;
+    max-height:none;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .episode .episode-title {
+    font-size:24px;
+  }
+}
+
+@media screen and (max-width: 1096px){
+.single-post .episode-content {
+    padding-left: 36px;
+    padding-right: 36px;
+    box-sizing: border-box;
+  }
 }

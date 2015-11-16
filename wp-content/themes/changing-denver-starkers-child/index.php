@@ -21,11 +21,13 @@
       <?php while ( have_posts() ) : the_post(); ?>
       	<li class="episode">
           <div class="episode-thumbnail">
-            <?php if ( has_post_thumbnail() ) {
-              the_post_thumbnail(); 
-            } else { ?>
-              <div class="placeholder-image"></div>
-            <?php } ?>
+            <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
+              <?php if ( has_post_thumbnail() ) {
+                the_post_thumbnail(); 
+              } else { ?>
+                <div class="placeholder-image"></div>
+              <?php } ?>
+            </a>
           </div>
           <article class="episode-content">
       			<h2 class="episode-title">
@@ -33,11 +35,11 @@
                 <?php the_title(); ?>
               </a>
             </h2>
-      			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
+      			<time class="episode-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
               <?php the_date(); ?> <?php the_time(); ?>
             </time> 
-            <?php // comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-      			<?php the_content(); ?>
+      			<?php $mycontent = wp_trim_words(get_the_content(), 4, ''); ?>
+            <?php echo apply_filters('the_content', $mycontent); ?>
       		</article>
       	</li>
       <?php endwhile; ?>
