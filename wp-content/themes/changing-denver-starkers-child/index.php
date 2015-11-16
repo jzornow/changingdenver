@@ -30,14 +30,16 @@
             </a>
           </div>
           <article class="episode-content">
-      			<h2 class="episode-title">
-              <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
-                <?php the_title(); ?>
-              </a>
-            </h2>
-      			<time class="episode-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
-              <?php the_date(); ?> <?php the_time(); ?>
-            </time> 
+			      <div class="episode-header">
+              <h2 class="episode-title">
+                <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
+                  <?php the_title(); ?>
+                </a>
+              </h2>
+        			<time class="episode-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
+                <?php the_date(); ?> <?php the_time(); ?>
+              </time> 
+            </div>
       			<?php $mycontent = wp_trim_words(get_the_content(), 4, ''); ?>
             <?php echo apply_filters('the_content', $mycontent); ?>
       		</article>

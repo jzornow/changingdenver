@@ -257,7 +257,8 @@ p {
   margin-bottom:1em;
 }
 
-.episode-content {
+.episode-content,
+.single-post .episode {
   max-width:1024px;
   width:100%;
   margin:auto;
@@ -266,16 +267,25 @@ p {
 .podcast-class {
   width:100%;
   display:block;
-  margin:20px auto;
+  margin-bottom:20px;
 }
 
-.single-post .episode-content {
+.single-post .episode {
   margin-top:36px;
 }
 
+.single-post .episode .episode-header {
+  height:120px;
+  background-color:#efefef;
+}
+
 @media screen and (max-width:648px) {
-  .episodes-list .episode .episode-content {
+  .single-post .episode .episode-header,
+  .episodes-list .episode .episode-header {
     clear:both;
+    height:auto;
+    padding-bottom:24px;
+
   }
 
   .episode .episode-title {
@@ -311,7 +321,7 @@ p {
 }
 
 @media screen and (max-width: 1096px){
-.single-post .episode-content {
+.single-post .episode {
     padding-left: 36px;
     padding-right: 36px;
     box-sizing: border-box;

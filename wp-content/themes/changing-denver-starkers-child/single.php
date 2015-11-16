@@ -13,19 +13,31 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-<article class="episode-content">
+  <article class="episode">
+    <div class="episode-thumbnail">
+      <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
+        <?php if ( has_post_thumbnail() ) {
+          the_post_thumbnail(); 
+        } else { ?>
+          <div class="placeholder-image"></div>
+        <?php } ?>
+      </a>
+    </div>
+    <div class="episode-content">
+      <div class="episode-header">
+        <h2 class="episode-title">
+          <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
+            <?php the_title(); ?>
+          </a>
+        </h2>
+        <time class="episode-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
+          <?php the_date(); ?> <?php the_time(); ?>
+        </time>
+      </div> 
+      <?php the_content(); ?>
+    </div>
+  </article>
 
-	<h2 class="episode-title"><?php the_title(); ?></h2>
-	<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-	<?php the_content(); ?>			
-
-	<?php if ( get_the_author_meta( 'description' ) ) : ?>
-	<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-	<h3>About <?php echo get_the_author() ; ?></h3>
-	<?php the_author_meta( 'description' ); ?>
-	<?php endif; ?>
-
-</article>
 <?php endwhile; ?>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
