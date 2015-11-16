@@ -228,3 +228,8 @@ footer {
 p {
   margin-bottom:1em;
 }
+
+article {
+  max-width:1024px;
+  margin:auto;
+}
