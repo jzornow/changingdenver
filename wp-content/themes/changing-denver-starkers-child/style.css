@@ -372,3 +372,20 @@ p {
 .about-us-faq .contact-info .name {
   font-style: italic;
 }
+
+.about-us-faq .newsletter-sign-up {
+  width:350px;
+  margin:24px 48px;
+  max-width:100%;
+}
+
+.about-us-faq .newsletter-sign-up .yikes-easy-mc-form input {
+  background-color:white;
+}
+
+@media screen and (max-width:568px) {
+  .about-us-faq .newsletter-sign-up {
+    margin:24px 0;
+    width:100%;
+  }
+}
