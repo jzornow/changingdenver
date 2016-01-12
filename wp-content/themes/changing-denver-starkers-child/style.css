@@ -235,6 +235,8 @@ footer {
   font-size:36px;
   background-color:#fff;
   padding:8px;
+  position:relative;
+  z-index: 1000;
 }
 
 .episode .episode-title a {
