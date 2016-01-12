@@ -20,19 +20,17 @@
     <ol class="episodes-list">
       <?php while ( have_posts() ) : the_post(); ?>
       	<li class="episode">
-          <div class="episode-thumbnail">
-            <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
-              <?php if ( has_post_thumbnail() ) {
-                the_post_thumbnail(); 
-              } else { ?>
-                <div class="placeholder-image"></div>
-              <?php } ?>
-            </a>
-          </div>
           <article class="episode-content">
-			      <div class="episode-header">
+          <?php 
+            if ( has_post_thumbnail() ) { 
+              $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); 
+          ?>
+			      <div class="episode-header" style="background-image: url('<?php echo $thumbnail_url; ?>');">
+          <?php } else { ?>
+            <div class="episode-header">
+          <?php } ?>
               <h2 class="episode-title">
-                <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
+                <a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark">
                   <?php the_title(); ?>
                 </a>
               </h2>

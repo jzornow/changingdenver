@@ -213,46 +213,33 @@ footer {
   margin-bottom:0;
 }
 
-.episode .episode-thumbnail a {
-  height:100%;
-  width:100%;
-  display:block;
-  position:relative;
-  z-index:1000;
-}
-
-
 .episode .episode-thumbnail {
-  width:120px;
-  height:120px;
-  /*border:1px solid red;*/
-  float:left;
-  margin-right:24px;
-  overflow-x:hidden;
+  display:block;
+  width:100%;
 }
 
 .episode-thumbnail .placeholder-image {
-  width:100%;
-  height:100%;
+  width:0;
+  height:0;
   background-color:blue;
 }
 
 .episode .episode-thumbnail .wp-post-image {
   max-height:100%;
   min-height:100%;
-  width:auto;
+  width:100%;
   height:auto;
 }
 
 .episode .episode-title {
-  font-size:48px;
-  margin-bottom:12px;
-  padding-top:12px;
+  font-size:36px;
+  background-color:#fff;
+  padding:8px;
 }
 
 .episode .episode-title a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
 p {
@@ -277,17 +264,40 @@ p {
 }
 
 .single-post .episode .episode-header {
-  height:120px;
+  background-image:none;
+  padding:18px;
+}
+
+.single-post .episode .episode-title,
+.single-post .episode .episode-header time
+ {
+  background-color:transparent;
+}
+
+.episode .episode-header {
   background-color:#efefef;
+  background-position:50% 50%;
+  background-image:url('img/downtown_denver_banner.jpg');
+  color:white;
+  padding:24px;
+  clear:both;
+  height:auto;
+
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+.episode .episode-header time {
+  background-color:#fff;
+  color:black;
+  padding:12px;
 }
 
 @media screen and (max-width:648px) {
   .single-post .episode .episode-header,
   .episodes-list .episode .episode-header {
-    clear:both;
-    height:auto;
-    padding-bottom:24px;
-
+    
   }
 
   .episode .episode-title {
@@ -295,18 +305,6 @@ p {
     width:100%;
     font-size:32px;
     clear:both;
-  }
-
-  .episode .episode-date,
-  .episode .episode-title {
-    padding-left:12px;
-    padding-right:12px;
-  }
-
-  .episode .episode-thumbnail {
-    display:block;
-    width:100%;
-    overflow-y:hidden;
   }
 
   .episode .episode-thumbnail .wp-post-image {
