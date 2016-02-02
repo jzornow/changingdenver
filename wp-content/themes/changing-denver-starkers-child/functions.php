@@ -15,4 +15,21 @@
 
 add_action( 'init', 'register_my_menus' );
 
+// Note: This really should be in a separate plugin.
+
+add_action( 'init', 'create_episodes_post_type' );
+function create_episodes_post_type() {
+  register_post_type( 'episode',
+    array(
+      'labels' => array(
+        'name' => __( 'Episodes' ),
+        'singular_name' => __( 'Episode' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'episodes'),
+    )
+  );
+}
+
 ?>
