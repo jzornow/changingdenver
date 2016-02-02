@@ -277,6 +277,7 @@ p {
 .episode .episode-header {
   background-color:#efefef;
   background-position:50% 50%;
+  background-size:cover;
   background-image:url('img/downtown_denver_banner.jpg');
   color:white;
   padding:24px;
