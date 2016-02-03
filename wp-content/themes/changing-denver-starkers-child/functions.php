@@ -28,6 +28,7 @@ function create_episodes_post_type() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'episodes'),
+      'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail' )
     )
   );
 }
