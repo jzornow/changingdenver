@@ -13,8 +13,8 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-  <article class="episode">
-    <div class="episode-thumbnail">
+  <article class="blog-post">
+    <div class="blog-post-thumbnail">
       <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
         <?php if ( has_post_thumbnail() ) {
           the_post_thumbnail(); 
@@ -23,14 +23,14 @@
         <?php } ?>
       </a>
     </div>
-    <div class="episode-content">
-      <div class="episode-header">
-        <h2 class="episode-title">
+    <div class="blog-post-content">
+      <div class="blog-post-header">
+        <h2 class="blog-post-title">
           <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
             <?php the_title(); ?>
           </a>
         </h2>
-        <time class="episode-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
+        <time class="blog-post-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
           <?php the_date(); ?> <?php the_time(); ?>
         </time>
       </div> 
