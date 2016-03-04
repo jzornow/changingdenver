@@ -150,13 +150,13 @@ header {
 
 @media screen and (max-width:750px) {
   header, #logo {
-    height:280px;
+    height:250px;
   }
 } 
 
 @media screen and (max-width:548px){
   #logo {
-    background-size: contain;
+    background-size: 140%;
   }
 }
 
