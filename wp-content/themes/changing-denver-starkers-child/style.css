@@ -414,9 +414,18 @@ p {
   background-color:white;
 }
 
+blockquote {
+  margin-left:2em;
+  border-left:5px solid grey;
+  padding-left:1em;
+  font-size:1.25em;
+  color:gray;
+}
+
 @media screen and (max-width:568px) {
   .about-us-faq .newsletter-sign-up {
     margin:24px 0;
     width:100%;
   }
+
 }
