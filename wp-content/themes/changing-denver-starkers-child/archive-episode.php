@@ -17,24 +17,24 @@
 <div class="content">
   <?php if ( have_posts() ): ?>
     <h1 class="page-title">Episodes</h2>	
-    <ol class="episodes-list">
+    <ol class="posts-list">
       <?php while ( have_posts() ) : the_post(); ?>
-      	<li class="episode">
-          <article class="episode-content">
+      	<li class="post">
+          <article class="post-content">
           <?php 
             if ( has_post_thumbnail() ) { 
               $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); 
           ?>
-			      <div class="episode-header" style="background-image: url('<?php echo $thumbnail_url; ?>');">
+			      <div class="post-header episode-header" style="background-image: url('<?php echo $thumbnail_url; ?>');">
           <?php } else { ?>
-            <div class="episode-header">
+            <div class="post-header episode-header">
           <?php } ?>
-              <h2 class="episode-title">
+              <h2 class="post-title">
                 <a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark">
                   <?php the_title(); ?>
                 </a>
               </h2>
-        			<time class="episode-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
+        			<time class="post-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
                 <?php the_date(); ?> <?php the_time(); ?>
               </time> 
             </div>

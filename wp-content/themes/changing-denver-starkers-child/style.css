@@ -234,26 +234,26 @@ footer {
  
 }
 
-.episodes-list {
+.posts-list {
   margin-top:48px;
 }
 
-.episodes-list .episode {
+.posts-list .post {
   /*border:1px solid black;*/
   background-color:#efefef;
   margin-bottom:36px;
   
 }
 
-.episode {
+.post {
   width:100%;
 }
 
-.episode .episode:last-child {
+.post .post:last-child {
   margin-bottom:0;
 }
 
-.episode .episode-title {
+.post .post-title {
   font-size:36px;
   background-color:#fff;
   padding:8px;
@@ -261,7 +261,7 @@ footer {
   z-index: 1000;
 }
 
-.episode .episode-title a {
+.post .post-title a {
     text-decoration: none;
     color: black;
 }
@@ -270,14 +270,14 @@ p {
   margin-bottom:1em;
 }
 
-.episode {
+.post {
   margin-top:2em;
   max-width:1024px;
   width:100%;
   margin:auto;
 }
 
-.episode .episode-header {
+.post-header {
   background-color:#efefef;
   background-position:50% 50%;
   background-size:cover;
@@ -292,19 +292,19 @@ p {
   -webkit-box-sizing:border-box;
 }
 
-.episode .episode-header time {
+.post .post-header time {
   background-color:#fff;
   color:black;
   padding:12px;
 }
 
-.episode .episode-description {
+.post .post-description {
   margin-top:2em;
 }
 
 @media screen and (max-width:648px) {
 
-  .episode .episode-title {
+  .post .post-title {
     display:block;
     width:100%;
     font-size:32px;
@@ -314,7 +314,7 @@ p {
 }
 
 @media screen and (max-width:380px) {
-  .episode .episode-title {
+  .post .post-title {
     font-size:24px;
   }
 }
