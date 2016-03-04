@@ -201,9 +201,27 @@ header {
   margin:36px auto;
 }
 
+.page-title-block {
+  overflow:auto;
+  width:100%;
+}
+
+.page-title-block .page-title {
+  float:left;
+}
+
 .page-title {
   font-size:48px;
   margin-bottom:24px;
+}
+
+.page-subtitle {
+  font-size:20px;
+  font-weight:normal;
+  float:left;
+  margin:0.75em 0 0.5em 1.5em;
+  padding:0.25em 0.75em 0.25em;
+  background-color:#f2f2f2;
 }
 
 footer {
@@ -239,8 +257,6 @@ footer {
 }
 
 .posts-list .post {
-  /*border:1px solid black;*/
-  background-color:#efefef;
   margin-bottom:36px;
   
 }
@@ -258,8 +274,12 @@ footer {
 }
 
 .post .post-title a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
+.post .post-title a:hover {
+  color:gray;
 }
 
 p {
@@ -298,6 +318,10 @@ p {
   margin-top:2em;
 }
 
+.post .post-excerpt {
+  margin: 1.5em 1em 2.5em;
+}
+
 @media screen and (max-width:648px) {
 
   .post .post-title {
@@ -305,6 +329,30 @@ p {
     width:100%;
     font-size:32px;
     clear:both;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+
+  .page-title-block {
+    margin-bottom: 1em;
+  }
+
+  .page-title-block .page-title,
+  .page-title-block .page-subtitle {
+    float:none;
+    display:block;
+  }
+
+  .page-title-block .page-title {
+    margin-bottom:0.25em;
+  }
+
+  .page-title-block .page-subtitle {
+    margin: 0;
+    padding:1em;
+    text-align:center;
   }
 
 }

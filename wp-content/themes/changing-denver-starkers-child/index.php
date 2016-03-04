@@ -16,33 +16,36 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div class="content">
   <?php if ( have_posts() ): ?>
-    <h1 class="page-title">Blog</h1>
-    <h2 class="blog-posts-list-header">Greetings, Rain Shadow Boxers</h2>
+    <div class="page-title-block">
+      <h1 class="page-title">Blog</h1>
+      <h2 class="page-subtitle">Greetings, Rain Shadow Boxers!</h2>
+    </div>
     <ol class="blog-posts-list">
       <?php while ( have_posts() ) : the_post(); ?>
-      	<li class="blog-post">
-          <article class="blog-post-content">
+      	<li class="post">
+          <article class="post-content">
           <?php 
             if ( has_post_thumbnail() ) { 
               $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); 
           ?>
-			      <div class="blog-post-header" style="background-image: url('<?php echo $thumbnail_url; ?>');">
+            <div class="post-header" style="background-image: url('<?php echo $thumbnail_url; ?>');">
           <?php } else { ?>
-            <div class="blog-post-header">
+            <div class="post-header">
           <?php } ?>
-              <h2 class="blog-post-title">
+              <h2 class="post-title">
                 <a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark">
                   <?php the_title(); ?>
                 </a>
               </h2>
-        			<time class="blog-post-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
+              <time class="post-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
                 <?php the_date(); ?> <?php the_time(); ?>
               </time> 
             </div>
-      			<?php $mycontent = wp_trim_words(get_the_content(), 120, '...'); ?>
-            <?php echo apply_filters('the_content', $mycontent); ?>
-      		</article>
-      	</li>
+            <div class="post-excerpt">
+              <?php the_content(" [More...]") ?>
+            </div>
+          </article>
+        </li>
       <?php endwhile; ?>
     </ol>
   <?php else: ?>
