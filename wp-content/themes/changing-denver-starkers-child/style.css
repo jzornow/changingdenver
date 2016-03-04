@@ -245,10 +245,6 @@ footer {
   
 }
 
-.post {
-  width:100%;
-}
-
 .post .post:last-child {
   margin-bottom:0;
 }
@@ -298,7 +294,7 @@ p {
   padding:12px;
 }
 
-.post .post-description {
+.post .post-body {
   margin-top:2em;
 }
 
