@@ -10,34 +10,35 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+  
+  <div class="content">
+  
+    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-  <article class="blog-post">
-    <div class="blog-post-thumbnail">
-      <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
-        <?php if ( has_post_thumbnail() ) {
-          the_post_thumbnail(); 
-        } else { ?>
-          <div class="placeholder-image"></div>
-        <?php } ?>
-      </a>
-    </div>
-    <div class="blog-post-content">
-      <div class="blog-post-header">
-        <h2 class="blog-post-title">
+      <article class="post">
+        <?php if ( has_post_thumbnail() ) { 
+          $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+          <div class="post-header episode-header" style="background-image:url('<?php echo $thumbnail_url ?>')">
+        <?php } else { ?>
+          <div class="post-header episode-header">
+        <?php } ?> 
+        <h2 class="post-title">
           <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
             <?php the_title(); ?>
           </a>
         </h2>
-        <time class="blog-post-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
+        <time class="post-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
           <?php the_date(); ?> <?php the_time(); ?>
         </time>
       </div> 
-      <?php the_content(); ?>
-    </div>
-  </article>
 
-<?php endwhile; ?>
+      <div class="post-body">
+        <?php the_content(); ?>
+      </div>
+    </article>
+
+    <?php endwhile; ?>
+
+  </div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
