@@ -16,12 +16,7 @@
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
       <article class="post">
-        <?php if ( has_post_thumbnail() ) { 
-          $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-          <div class="post-header episode-header" style="background-image:url('<?php echo $thumbnail_url ?>')">
-        <?php } else { ?>
-          <div class="post-header episode-header">
-        <?php } ?> 
+          <div class="post-header">
         <h2 class="post-title">
           <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
             <?php the_title(); ?>
@@ -32,8 +27,21 @@
         </time>
       </div> 
 
-      <div class="post-body">
-        <?php the_content(); ?>
+        <?php if ( has_post_thumbnail() ) { 
+          $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+        ?>
+        <div class="post-body post-body-with-columns">
+          <div class="post-thumbnail-holder">
+            <a href="<?php echo $thumbnail_url ?>">
+              <img class="post-thumbnail" src="<?php echo $thumbnail_url ?>">
+            </a>
+          </div>
+        <?php } else { ?>
+          <div class="post-body">
+        <?php } ?> 
+        <div class="post-description">
+          <?php the_content(); ?>
+        </div>
       </div>
     </article>
 
