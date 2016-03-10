@@ -16,9 +16,12 @@
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
       <article class="post">
+
+
+
         <?php if ( has_post_thumbnail() ) { 
           $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-          <div class="post-header episode-header" style="background-image:url('<?php echo $thumbnail_url ?>')">
+          <div class="post-header episode-header" style="background-image:url('<?php  echo get_stylesheet_directory_uri() . '/img/cover-photo-' . rand(1,4) . '.jpg' ?>')">
         <?php } else { ?>
           <div class="post-header episode-header">
         <?php } ?> 
