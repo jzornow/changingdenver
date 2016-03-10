@@ -200,6 +200,7 @@ header {
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
   }
+
 }
 
 .content {
@@ -317,7 +318,9 @@ p {
 }
 
 .post .post-header,
-.post .post-thumbnail-holder {
+.post .post-thumbnail-holder,
+.newsletter-sign-up form,
+.about-us-faq {
   box-shadow: -6px 6px #ccc;
 }
 
@@ -437,6 +440,8 @@ blockquote {
     text-align:center;
   }
 
+
+
 }
 
 @media screen and (max-width:380px) {
@@ -450,17 +455,22 @@ blockquote {
 .about-us-title {
   font-size:24px;
   margin-bottom:12px;
+  color:gray;
+
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
 
-.about-us-faq {
-  background-color:#efefef;
-  padding:24px;
-  border:1px solid black;
+.about-us-title, .about-us-explanation {
+  width:100%;
+  max-width:450px;
+  margin:auto;
 }
 
+.about-us-explanation {
+  margin-top: 1em;
+}
 .about-us-faq .faq-entry {
   margin-bottom:24px;
 }
@@ -486,14 +496,77 @@ blockquote {
   font-style: italic;
 }
 
+.newsletter-sign-up-holder {
+  padding:24px;
+}
+
+.newsletter-sign-up-holder h1 {
+  font-size:28px;
+}
+
+.newsletter-sign-up-holder .newsletter-teaser {
+  font-size:22px;
+  margin:1em 0;
+}
+
+.newsletter-sign-up-holder .newsletter-sign-up {
+  width:100%;
+  max-width:300px;
+  margin:auto;
+}
+
 .about-us-faq .newsletter-sign-up {
-  width:350px;
+  width:100%;
   margin:24px 48px;
-  max-width:100%;
+  max-width:350px;
+}
+
+.about-us-faq,
+.newsletter-sign-up form {
+  padding:2em;
+  background-color:#fdfdfd;
+
+  box-sizing: border-box;
+  -mox-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.newsletter-sign-up .yikes-easy-mc-form .yikes-easy-mc-submit-button {
+  margin-left:50%;
+  width:50%;
+  margin-top:2em;
+  margin-bottom:0;
+}
+
+.newsletter-sign-up form label {
+  font-weight:bold;
+  color:gray;
 }
 
 .about-us-faq .newsletter-sign-up .yikes-easy-mc-form input {
   background-color:white;
+}
+
+@media screen and (max-width:362px){
+
+  .newsletter-sign-up-holder {
+    padding-left:0;
+    padding-right:0;
+  }
+}
+
+.about-us-attribution {
+  margin-bottom:1em;
+  margin-left:2em;
+  font-size:0.75em;
+}
+
+.about-us-attribution:first-child {
+  margin-top: 1em;
+}
+
+.about-us-attribution a:first-child {
+  font-weight:bold;
 }
 
 @media screen and (max-width:568px) {
