@@ -366,6 +366,17 @@ p {
 .post .post-thumbnail-caption {
   padding:1em;
   font-size:0.75em;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+blockquote {
+  margin-left:2em;
+  border-left:6px solid #ccc;
+  padding-left:1em;
+  color:gray;
 }
 
 @media screen and (max-width:648px) {
@@ -380,6 +391,24 @@ p {
 }
 
 @media screen and (max-width:500px) {
+
+  .post .post-description,
+  .post .post-thumbnail-holder,
+  .post .post-thumbnail-holder .post-thumbnail-link,
+  .post .post-thumbnail-holder .post-thumbnail,
+  .post .post-thumbnail-holder .post-thumbnail-caption,
+  .post-body.post-body-with-columns .post-description {
+    width:100%;
+    display:block;
+    float:none;
+  }
+
+  blockquote { margin-left: 1em; }
+
+  .post-body.post-body-with-columns .post-description {
+    margin-top:2em;
+    padding: 0;
+  }
 
   .page-title-block {
     margin-bottom: 1em;
@@ -458,13 +487,6 @@ p {
 
 .about-us-faq .newsletter-sign-up .yikes-easy-mc-form input {
   background-color:white;
-}
-
-blockquote {
-  margin-left:2em;
-  border-left:6px solid #ccc;
-  padding-left:1em;
-  color:gray;
 }
 
 @media screen and (max-width:568px) {
