@@ -69,9 +69,12 @@ body {
   margin:24px 24px auto auto;
 }
 
-
 .brand-wrapper .menu-navigation-menu-container #menu-navigation-menu {
   float:right;
+}
+
+hr {
+  margin: 3em 4em;
 }
 
 .brand-wrapper .menu-navigation-menu-container .menu-item,
