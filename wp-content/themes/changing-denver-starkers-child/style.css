@@ -164,6 +164,10 @@ header {
 }
 
 @media screen and (max-width:362px){
+  .brand-wrapper .menu-navigation-menu-container {
+    margin:auto;
+  }
+
   .header-menu #menu-navigation-menu {
     display:table;
     width:100%;

@@ -11,7 +11,9 @@ Template Name: Home Page
 <div class="home-background-wrapper">
 
   <div class="brand-wrapper">
-    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+      <div class="header-menu">
+        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+      </div>
   </div>
 <!--
   <?php query_posts('showposts=1'); ?>
