@@ -28,13 +28,19 @@
       </div> 
 
         <?php if ( has_post_thumbnail() ) { 
-          $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+          $thumbnail_id = get_post_thumbnail_id($post->ID);
+          $thumbnail_url = wp_get_attachment_url( $thumbnail_id );
         ?>
         <div class="post-body post-body-with-columns">
           <div class="post-thumbnail-holder">
-            <a href="<?php echo $thumbnail_url ?>">
+            <a class="post-thumbnail-link" href="<?php echo $thumbnail_url ?>">
               <img class="post-thumbnail" src="<?php echo $thumbnail_url ?>">
             </a>
+            <?php if ( has_excerpt($thumbnail_id) ) { ?>
+              <div class="post-thumbnail-caption">
+                <?php echo get_post($thumbnail_id)->post_excerpt; ?>
+              </div>
+            <?php } ?>
           </div>
         <?php } else { ?>
           <div class="post-body">
