@@ -212,7 +212,14 @@ header {
 
 .page-title-block {
   overflow:auto;
+  margin-bottom:2em;
   width:100%;
+  background-color:#f2f2f2;
+  padding:1em;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 .page-title-block .page-title {
@@ -220,17 +227,15 @@ header {
 }
 
 .page-title {
-  font-size:48px;
-  margin-bottom:24px;
+  font-size:32px;
+  color:#666;
 }
 
 .page-subtitle {
   font-size:20px;
-  font-weight:normal;
-  float:left;
-  margin:0.75em 0 0.5em 1.5em;
-  padding:0.25em 0.75em 0.25em;
-  background-color:#f2f2f2;
+  font-weight:lighter;
+  float:right;
+  padding:0.5em;
 }
 
 footer {
@@ -320,7 +325,8 @@ p {
 .post .post-header,
 .post .post-thumbnail-holder,
 .newsletter-sign-up form,
-.about-us-faq {
+.about-us-faq,
+.page-title-block {
   box-shadow: -6px 6px #ccc;
 }
 
@@ -424,23 +430,9 @@ blockquote {
     margin-bottom: 1em;
   }
 
-  .page-title-block .page-title,
-  .page-title-block .page-subtitle {
-    float:none;
-    display:block;
-  }
-
   .page-title-block .page-title {
     margin-bottom:0.25em;
   }
-
-  .page-title-block .page-subtitle {
-    margin: 0;
-    padding:1em;
-    text-align:center;
-  }
-
-
 
 }
 
@@ -464,7 +456,7 @@ blockquote {
 
 .about-us-title, .about-us-explanation {
   width:100%;
-  max-width:450px;
+  max-width:600px;
   margin:auto;
 }
 

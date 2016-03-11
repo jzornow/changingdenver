@@ -16,8 +16,10 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div class="content">
   <?php if ( have_posts() ): ?>
-    <h1 class="page-title">Episodes</h2>	
-    <ol class="posts-list">
+    <div class="page-title-block">
+      <h1 class="page-title">Episodes</h1>
+    </div>
+        <ol class="posts-list">
       <?php while ( have_posts() ) : the_post(); ?>
       	<li class="post">
           <article class="post-content">

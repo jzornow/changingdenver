@@ -17,8 +17,8 @@
 <div class="content">
   <?php if ( have_posts() ): ?>
     <div class="page-title-block">
-      <h1 class="page-title">Blog</h1>
-      <h2 class="page-subtitle">Greetings, Rain Shadow Boxers!</h2>
+      <h1 class="page-title">Boxing in the Rain Shadow</h1>
+      <h2 class="page-subtitle">The Changing Denver Blog</h2>
     </div>
     <ol class="blog-posts-list">
       <?php while ( have_posts() ) : the_post(); ?>
