@@ -37,7 +37,7 @@
                 </a>
               </h2>
         			<time class="post-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
-                <?php the_date(); ?> <?php the_time(); ?>
+                <?php the_date(); ?>
               </time> 
             </div>
             <iframe class="player" style="border: none; width:100%" src="//html5-player.libsyn.com/embed/episode/id/<?php echo the_field('episode_id'); ?>/height/46/width/640/theme/standard/autoplay/no/autonext/no/thumbnail/no/preload/no/no_addthis/no/direction/backward/no-cache/true/" height="46" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>

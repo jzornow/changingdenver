@@ -38,7 +38,7 @@
                 </a>
               </h2>
               <time class="post-date" datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
-                <?php the_date(); ?> <?php the_time(); ?>
+                <?php the_date(); ?>
               </time> 
             </div>
             <div class="post-excerpt">
