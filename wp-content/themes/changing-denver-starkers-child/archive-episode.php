@@ -15,12 +15,20 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div class="content">
-  <?php if ( have_posts() ): ?>
+  <?php 
+    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+    $the_query = new WP_Query( array(
+      'post_type' => 'episode',
+      'paged' => $paged
+    ));
+  ?>
+
+  <?php if ( $the_query->have_posts() ): ?>
     <div class="page-title-block">
       <h1 class="page-title">Episodes</h1>
     </div>
         <ol class="posts-list">
-      <?php while ( have_posts() ) : the_post(); ?>
+      <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
       	<li class="post">
           <article class="post-content">
           <?php 
@@ -49,5 +57,23 @@
   <?php else: ?>
     <h2>No posts to display</h2>
   <?php endif; ?>
+
+  <div class="page-numbers-holder">
+    <?php
+
+      global $wp_query;
+
+      $big = 999999999; // need an unlikely integer
+
+      echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $the_query->max_num_pages
+      ) );
+    
+    ?>
+  </div>
 </div>
+
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
