@@ -314,7 +314,8 @@ p {
   color: #555;
 }
 
-.page-numbers-holder .page-numbers:hover {
+.page-numbers-holder .page-numbers:hover, 
+.page-numbers-holder .page-numbers.current {
   background-color: #ccc;
 }
 
