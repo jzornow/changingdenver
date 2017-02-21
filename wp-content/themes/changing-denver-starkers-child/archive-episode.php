@@ -56,7 +56,7 @@
       <?php endwhile; ?>
     </ol>
   <?php else: ?>
-    <h2>No posts to display</h2>
+    <h2>No episodes to display.</h2>
   <?php endif; ?>
 
   <div class="page-numbers-holder">
