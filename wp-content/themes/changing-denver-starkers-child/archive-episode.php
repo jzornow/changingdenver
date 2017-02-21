@@ -23,10 +23,11 @@
     ));
   ?>
 
+  <div class="page-title-block">
+    <h1 class="page-title">Episodes</h1>
+  </div>
+
   <?php if ( $the_query->have_posts() ): ?>
-    <div class="page-title-block">
-      <h1 class="page-title">Episodes</h1>
-    </div>
         <ol class="posts-list">
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
       	<li class="post">
