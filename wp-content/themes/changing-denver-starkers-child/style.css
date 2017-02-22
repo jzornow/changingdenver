@@ -93,6 +93,13 @@ hr {
   text-decoration: none;
   color:white;
   transition:0.2s;
+
+  /* keep menu text from being selected */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .header-menu #menu-navigation-menu .menu-item-has-children {
