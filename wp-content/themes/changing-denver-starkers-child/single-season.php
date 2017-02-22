@@ -22,6 +22,8 @@
       </h1>
     </div>
     <?php 
+      $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
       // because seasons are named for their number
       $season_id = get_the_ID();
 
@@ -67,6 +69,24 @@
 
 
   <?php endwhile; ?>
+</div>
+
+<div class="page-numbers-holder">
+    <?php
+
+      global $wp_query;
+
+      $big = 999999999; // need an unlikely integer
+
+      echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $the_query->max_num_pages
+      ) );
+    
+    ?>
+  </div>
 </div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
