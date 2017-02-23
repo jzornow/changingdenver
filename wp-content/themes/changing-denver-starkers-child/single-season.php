@@ -18,7 +18,7 @@
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="page-title-block">
       <h1 class="page-title">
-        <?php echo "Episodes - Season " . get_the_title(); ?>
+        <?php echo "Season " . get_the_title(); ?>
       </h1>
     </div>
     <?php 
