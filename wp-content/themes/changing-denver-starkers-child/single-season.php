@@ -67,11 +67,7 @@
     <h2>No episodes to display.</h2>
   <?php endif; ?>
 
-
-  <?php endwhile; ?>
-</div>
-
-<div class="page-numbers-holder">
+  <div class="page-numbers-holder">
     <?php
 
       global $wp_query;
@@ -87,6 +83,8 @@
     
     ?>
   </div>
+</div>
+  <?php endwhile; ?>
 </div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
