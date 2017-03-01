@@ -346,6 +346,7 @@ p {
 
 .page-numbers-holder .page-numbers {
   padding: 0.75em 1em;
+  display: inline-block;
   background-color: #efefef;
   text-decoration: none;
   font-size:1.5em;
@@ -356,7 +357,7 @@ p {
   .page-numbers-holder .page-numbers { display: none; }
   .page-numbers-holder .page-numbers.next,
   .page-numbers-holder .page-numbers.prev {
-    display: inline;
+    display: inline-block;
   }
 }
 
