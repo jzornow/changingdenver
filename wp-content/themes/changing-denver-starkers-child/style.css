@@ -352,6 +352,14 @@ p {
   color: #555;
 }
 
+@media screen and (max-width:648px) {
+  .page-numbers-holder .page-numbers { display: none; }
+  .page-numbers-holder .page-numbers.next,
+  .page-numbers-holder .page-numbers.prev {
+    display: inline;
+  }
+}
+
 .page-numbers-holder .page-numbers:hover, 
 .page-numbers-holder .page-numbers.current {
   background-color: #ccc;
