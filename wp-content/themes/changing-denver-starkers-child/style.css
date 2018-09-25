@@ -80,6 +80,7 @@ hr {
 .brand-wrapper .menu-navigation-menu-container .menu-item,
 .header-menu #menu-navigation-menu .menu-item {
   float:left;
+  min-width: 100px;
 }
 
 .brand-wrapper .menu-navigation-menu-container .menu-item a,
@@ -93,6 +94,8 @@ hr {
   text-decoration: none;
   color:white;
   transition:0.2s;
+  width: 100%;
+  box-sizing: border-box;
 
   /* keep menu text from being selected */
   -webkit-user-select: none;
